@@ -20,7 +20,7 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #f6f8fc, #e3f2fd);
+    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
       color: #333;
       line-height: 1.6;
       padding: 0;
@@ -86,19 +86,23 @@
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
-      background-color: #ffffff;
+      background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       margin-top: 30px;
+      border-bottom: 1px solid orange;
     }
 
     section h2 {
       margin-bottom: 20px;
       color: #007bb5;
-      border-bottom: 3px solid #007bb5;
+      border-bottom: 3px solid ;
       display: inline-block;
-      padding-bottom: 5px;
+      padding: 5px;
       font-size: 2rem;
+      background: #e5e5e5;
+      border-radius: 10px;
+
     }
 
     .grid {
@@ -120,6 +124,7 @@
       align-items: center;
       justify-content: space-between;
       text-align: center;
+
     }
 
     .card:hover {
@@ -136,6 +141,34 @@
       max-width: 100%;
       border-radius: 8px;
     }
+
+    .head-blog, #card-1 h3{
+      color: #007bb5;
+    border-color:#007bb5 ;}
+
+    .head-testcase, #card-2 h3{border-color:#3f48cc ;
+      color: #3f48cc;}
+
+    .head-project, #card-3 h3{border-color:#184a94 ;
+      color: #184a94 ;}
+
+    .head-playground, #card-4 h3{border-color:green ;
+      color: green;}
+
+      #card-1 .blog-button:hover{background-color:#007bb5 ;}
+
+      #card-2 .btn:hover:hover{background-color:#3f48cc ;}
+
+      #card-3 .btn:hover:hover{background-color:#184a94 ;}
+
+      #card-4 .btn:hover:hover{background-color: #3f48cc;}
+
+      #card-1{background-color:#c5e3f2 ;}
+
+      #card-2{background-color:#cccef6 ;}
+
+      #card-3{background-color:#d0e0f7 ;}
+
 
     footer {
       text-align: center;
@@ -193,8 +226,6 @@
 
     #playground h2 {
       margin-bottom: 20px;
-      color: #007bb5;
-      border-bottom: 3px solid #007bb5;
       display: inline-block;
       padding-bottom: 5px;
       font-size: 2rem;
@@ -260,7 +291,6 @@
     }
 
     .blog-button:hover, .btn:hover {
-      background-color: #f57c00;
       transform: translateY(-2px);
     }
     .gold {background: #e1e1e1;}
@@ -277,30 +307,30 @@
     <nav class="nav-links" id="navLinks">
       <a href="#blogs">Blogs</a>
       <a href="#testcases">Test Cases</a>
-      <a href="#playground">Playground</a>
+      <a href="https://testsite.pratiks-desk.site">Playground</a>
       <a href="#contact">Contact</a>
-       <a href="#about">About</a>
+       <a href="https://pratiks-desk.site">About</a>
     </nav>
   </header>
 
-  <section id="blogs">
-    <h2>Blogs</h2>
+  <section id="blogs section-1">
+    <h2 class="head-blog">Blogs</h2>
     <div class="grid">
-      <div class="card">
+      <div class="card" id="card-1">
          <img src="https://res.cloudinary.com/p-desk/image/upload/v1741816272/pratiks-desk-bugdiary_tp2ogh.webp" alt="BudDiary Blog">
         <h3>BugDiary</h3>
         <p>BugDiary – Breaking codes, not spirits! Unraveling Selenium, automation, and software testing concepts—one bug at a time.</p>
         <a href="https://bugdiary.pratiks-desk.site" target="_blank" class="blog-button">Read More</a>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-1">
         <img src="https://res.cloudinary.com/p-desk/image/upload/v1741816273/pratiks-desk-techbrary_nnkyd9.webp" alt="Tech Blog">
         <h3>Techbrary</h3>
         <p>Techbrary – Your ultimate library of code, tools, and tech! Stay updated, stay ahead.</p>
         <a href="https://techbrary.pratiks-desk.site" target="_blank" class="blog-button">Read More</a>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-1">
         <img src="https://res.cloudinary.com/p-desk/image/upload/v1742460554/pratiks-desk-letsprogramming_qbfwdl.webp" alt="lets-programming.pratiks-desk.site">
         <h3>Lets-Programming</h3>
         <p>Learn, code, and grow! Making programming fun and easy for everyone.</p>
@@ -309,42 +339,61 @@
     </div>
   </section>
 
-  <section id="testcases">
-    <h2>Test Case Library</h2>
+  <section id="testcases section-2">
+    <h2 class="head-testcase">Test Case Library</h2>
     <div class="grid">
-      <div class="card gold">
+      <div class="card gold" id="card-2">
         <h3>Check out my Test Cases</h3>
         <p>Here are my practiced test cases and scenarios. Want to take a look?</p>
         <a href="https://pratiks-desk.site/test-cases/" class="btn">Check Test Cases</a>
       </div>
 
-      <div class="card">
-        <h3>Login Test Cases</h3>
-        <p>Sanity, Retesting, Positive/Negative scenarios for login functionality.</p>
-        <a href="#" class="btn">Check Test Cases</a>
+      <div class="card" id="card-2">
+        <h3>Test Case 1: Sanity Test - Valid Login</h3>
+        <p></p>
+    
       </div>
 
-      <div class="card">
-        <h3>Checkout Test Cases</h3>
-        <p>Regression and E2E coverage for payment flow and order confirmation.</p>
-        <a href="#" class="btn">Check Test Cases</a>
+      <div class="card" id="card-2">
+        <h3>Negative Test - Blank Username and Password</h3>
+        <p></p>
+        
       </div>
 
-      <div class="card">
-        <h3>Change Password</h3>
-        <p>Edge case validation and UI/functional testing of password updates.</p>
-      </div>
+      
     </div>
   </section>
 
-  <section id="playground">
-    <h2>Selenium Playground</h2>
+  <section id = "testcase section-3">
+    <h2 class="head-project">Projects Practiced</h2>
+    <div class="grid">
+      <div class="card gold" id="card-3">
+        <h3>Calculator App</h3>
+        <p></p>
+        <a href="https://project.pratiks-desk.site/calculator/" class="btn">Check Test Cases</a>
+      </div>
+
+      <div class="card" id="card-3">
+        <h3>Weather-Report</h3>
+        <p></p>
+        <a href="https://project.pratiks-desk.site/Weather-Report/" class="btn">Check Test Cases</a>
+      </div>
+
+      <div class="card" id="card-3">
+        <h3>To-Do</h3>
+        <p></p>
+        <a href="https://project.pratiks-desk.site/to-do/" class="btn">Check Test Cases</a>
+      </div>
+  </section>
+
+  <section id="playground section-4">
+    <h2 class="head-playground">Selenium Playground</h2>
     <p>A demo site created for testers to practice automation scenarios such as form input, alerts, buttons, file upload, etc.</p>
     <div class="playground-card">
-      <div class="playground-content">
+      <div class="playground-content"  id="card-4">
         <h3>Launch the Playground</h3>
         <p>Test various automation scenarios and experiment with Selenium commands.</p>
-        <a href="#" class="playground-button">Launch Playground</a>
+        <a href="https://testsite.pratiks-desk.site" class="playground-button">Launch Playground</a>
       </div>
     </div>
   </section>
