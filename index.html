@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tester's Hub - Vinayak D</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    *::selection {
+       background-color: #f57c00;
+      color: black;
+    }
+
+
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f6f8fc, #e3f2fd);
+      color: #333;
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      background: #1e88e5; /* Blue header */
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #ffcc00;
+    }
+
+    .btn {
+      text-decoration: none;
+      color: white;
+      border: 2px solid transparent;
+      background: #1e88e5;
+      text-align: center;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      height: 3px;
+      background: white;
+      margin: 4px;
+      width: 25px;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      color: #007bb5;
+      border-bottom: 3px solid #007bb5;
+      display: inline-block;
+      padding-bottom: 5px;
+      font-size: 2rem;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center; /* Centers the grid content */
+    }
+
+    .card {
+      flex: 1 1 300px;
+      background: #f5f5f5; /* Lighter gray background for cards */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      color: #007bb5;
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      background:  #1e88e5;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #ffcc00;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+    flex-direction: column;
+    
+  }
+  .hamburger {
+    display: flex;
+    align-self: flex-start;
+  }
+
+  .nav-links {
+    align-items: center;
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 1px;
+    transition: all .7s ease;
+    width: 70%;
+    flex-direction: column;
+    background: darkslategrey;
+    padding: 8px 0;
+    border-radius: 10px;
+  }
+
+  .nav-links.show {
+    margin-top: 30px;
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 2px 10px;
+  }
+    }
+
+    /* Enhanced Playground Card Design */
+    #playground {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #e9eff1; /* Soft background for Playground */
+    }
+
+    #playground h2 {
+      margin-bottom: 20px;
+      color: #007bb5;
+      border-bottom: 3px solid #007bb5;
+      display: inline-block;
+      padding-bottom: 5px;
+      font-size: 2rem;
+    }
+
+    .playground-card {
+      background-color: #f6ecf0;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      text-align: center;
+    }
+
+    .playground-card:hover {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px);
+      background-color: #94db8c;
+
+    }
+
+    .playground-card h3 {
+      color: #007bb5;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .playground-card p {
+      color: #666;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .playground-button {
+      background-color: #007bb5;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .playground-button:hover {
+      background-color: limegreen;
+      font-weight: bolder;
+    }
+
+    /* Style for Read More and Check Test Cases Buttons */
+    .blog-button, .btn {
+      background-color: #1e88e5;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      margin-top: 15px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .blog-button:hover, .btn:hover {
+      background-color: #f57c00;
+      transform: translateY(-2px);
+    }
+    .gold {background: #e1e1e1;}
+    .gold a:hover{background: slateblue;}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pratik Joshi - Practice Hub</h1>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#blogs">Blogs</a>
+      <a href="#testcases">Test Cases</a>
+      <a href="#playground">Playground</a>
+      <a href="#contact">Contact</a>
+       <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section id="blogs">
+    <h2>Blogs</h2>
+    <div class="grid">
+      <div class="card">
+         <img src="https://res.cloudinary.com/p-desk/image/upload/v1741816272/pratiks-desk-bugdiary_tp2ogh.webp" alt="BudDiary Blog">
+        <h3>BugDiary</h3>
+        <p>BugDiary – Breaking codes, not spirits! Unraveling Selenium, automation, and software testing concepts—one bug at a time.</p>
+        <a href="https://bugdiary.pratiks-desk.site" target="_blank" class="blog-button">Read More</a>
+      </div>
+
+      <div class="card">
+        <img src="https://res.cloudinary.com/p-desk/image/upload/v1741816273/pratiks-desk-techbrary_nnkyd9.webp" alt="Tech Blog">
+        <h3>Techbrary</h3>
+        <p>Techbrary – Your ultimate library of code, tools, and tech! Stay updated, stay ahead.</p>
+        <a href="https://techbrary.pratiks-desk.site" target="_blank" class="blog-button">Read More</a>
+      </div>
+
+      <div class="card">
+        <img src="https://res.cloudinary.com/p-desk/image/upload/v1742460554/pratiks-desk-letsprogramming_qbfwdl.webp" alt="lets-programming.pratiks-desk.site">
+        <h3>Lets-Programming</h3>
+        <p>Learn, code, and grow! Making programming fun and easy for everyone.</p>
+        <a href="https://lets-programming.pratiks-desk.site/" target="_blank" class="blog-button">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="testcases">
+    <h2>Test Case Library</h2>
+    <div class="grid">
+      <div class="card gold">
+        <h3>Check out my Test Cases</h3>
+        <p>Here are my practiced test cases and scenarios. Want to take a look?</p>
+        <a href="https://pratiks-desk.site/test-cases/" class="btn">Check Test Cases</a>
+      </div>
+
+      <div class="card">
+        <h3>Login Test Cases</h3>
+        <p>Sanity, Retesting, Positive/Negative scenarios for login functionality.</p>
+        <a href="#" class="btn">Check Test Cases</a>
+      </div>
+
+      <div class="card">
+        <h3>Checkout Test Cases</h3>
+        <p>Regression and E2E coverage for payment flow and order confirmation.</p>
+        <a href="#" class="btn">Check Test Cases</a>
+      </div>
+
+      <div class="card">
+        <h3>Change Password</h3>
+        <p>Edge case validation and UI/functional testing of password updates.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="playground">
+    <h2>Selenium Playground</h2>
+    <p>A demo site created for testers to practice automation scenarios such as form input, alerts, buttons, file upload, etc.</p>
+    <div class="playground-card">
+      <div class="playground-content">
+        <h3>Launch the Playground</h3>
+        <p>Test various automation scenarios and experiment with Selenium commands.</p>
+        <a href="#" class="playground-button">Launch Playground</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>📧 connect.pratikjoshi@gmail.com | 🌐 <a href="https://github.com/pratiks-desk">GitHub</a></p>
+    <p>© 2025 Pratik Joshi</p>
+  </footer>
+
+   <script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('show');
+  }
+
+  // Close menu when any link is clicked on mobile
+  const links = document.querySelectorAll('.nav-links a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.remove('show');
+    });
+  });
+</script>
+
+</body>
+</html>
