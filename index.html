@@ -189,20 +189,32 @@
     flex-direction: column;
     
   }
+            header{paddding:7px;
+                   align-items: initial;}
+            header h1{font-size:1rem;}
+           .navbar {
+    flex-direction: column;
+    
+  }
   .hamburger {
     display: flex;
-     right: 1px;
     align-self: flex-end;
   }
+             .hamburger div {
+      height: 2px;
+      background: white;
+      margin: 2.5px;
+      width: 18px;
+    }
 
   .nav-links {
     align-items: center;
     display: none;
     position: absolute;
-    top: 65px;
-    right: 1px;
+    top: 85px;
+    right: 15px;
     transition: all .7s ease;
-    width: 75%;
+    width: 70%;
     flex-direction: column;
     background: darkslategrey;
     padding: 8px 0;
