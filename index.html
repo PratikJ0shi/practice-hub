@@ -179,8 +179,10 @@
     }
 
     footer a {
-      color: #ffcc00;
+      text-decoration: none;
+      color: #fff;
     }
+    footer a:hover{color: yellow;}
 
     @media (max-width: 768px) {
       .navbar {
@@ -220,10 +222,10 @@
 
     /* Enhanced Playground Card Design */
     #playground {
-      text-align: center;
       padding: 50px 20px;
       background-color: #e9eff1; /* Soft background for Playground */
     }
+    #playground p{text-align:center;}
 
     #playground h2 {
       margin-bottom: 20px;
@@ -306,9 +308,9 @@
       <div></div><div></div><div></div>
     </div>
     <nav class="nav-links" id="navLinks">
-      <a href="#blogs">Blogs</a>
+      <a href="https://blogs.pratiks-desk.site">Blogs</a>
       <a href="#testcases">Test Cases</a>
-      <a href="https://testsite.pratiks-desk.site">Playground</a>
+      <a href="#playground">Playground</a>
       <a href="#contact">Contact</a>
        <a href="https://pratiks-desk.site">About</a>
     </nav>
@@ -340,7 +342,7 @@
     </div>
   </section>
 
-  <section id="testcases section-2">
+  <section id="testcases">
     <h2 class="head-testcase">Test Case Library</h2>
     <div class="grid">
       <div class="card gold" id="card-2">
@@ -365,36 +367,36 @@
     </div>
   </section>
 
-  <section id = "testcase section-3">
+  <section id = "projects">
     <h2 class="head-project">Projects Practiced</h2>
     <div class="grid">
       <div class="card gold" id="card-3">
         <h3>Calculator App</h3>
         <p></p>
-        <a href="https://project.pratiks-desk.site/calculator/" class="btn">Check Test Cases</a>
+        <a href="https://project.pratiks-desk.site/calculator/" class="btn">Open</a>
       </div>
 
       <div class="card" id="card-3">
         <h3>Weather-Report</h3>
         <p></p>
-        <a href="https://project.pratiks-desk.site/Weather-Report/" class="btn">Check Test Cases</a>
+        <a href="https://project.pratiks-desk.site/Weather-Report/" class="btn">Open</a>
       </div>
 
       <div class="card" id="card-3">
         <h3>To-Do</h3>
         <p></p>
-        <a href="https://project.pratiks-desk.site/to-do/" class="btn">Check Test Cases</a>
+        <a href="https://project.pratiks-desk.site/to-do/" class="btn">Open</a>
       </div>
 
       <div class="card" id="card-3">
         <h3>Counter</h3>
         <p></p>
-        <a href="https://project.pratiks-desk.site/counter/" class="btn">Check Test Cases</a>
+        <a href="https://project.pratiks-desk.site/counter/" class="btn">Open</a>
       </div>
   </section>
 
-  <section id="playground section-4">
-    <h2 class="head-playground">Selenium Playground</h2>
+  <section id="playground">
+    <h2 class="head-playground section-4">Selenium Playground</h2>
     <p>A demo site created for testers to practice automation scenarios such as form input, alerts, buttons, file upload, etc.</p>
     <div class="playground-card">
       <div class="playground-content"  id="card-4">
@@ -406,8 +408,8 @@
   </section>
 
   <footer id="contact">
-    <p>📧 connect.pratikjoshi@gmail.com | 🌐 <a href="https://github.com/pratiks-desk">GitHub</a></p>
-    <p>© 2025 Pratik Joshi</p>
+    <p>📧 connect.pratikjoshi@gmail.com | © 2025  <a href="https://pratiks-desk.site">
+    Pratik Joshi</a></p>
   </footer>
 
    <script>
