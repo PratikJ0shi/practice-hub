@@ -109,11 +109,49 @@
       overflow-x: auto;
     }
 
-    @media (max-width: 768px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
-    }
+    @media (max-width: 768px) {@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .calculator {
+    padding: 1rem;
+  }
+
+  .display {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .qa-docs {
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+
+  table, th, td {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  pre {
+    font-size: 0.9rem;
+  }
+}
   </style>
 </head>
 <body>
