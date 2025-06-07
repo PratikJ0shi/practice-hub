@@ -20,17 +20,9 @@ A simple, responsive front-end authentication interface built with HTML, CSS, an
 
 - ❓ **Forgot Password Page**
   - Email input for password recovery
-  - Prepares for future backend integration
-
-- 📱 **Responsive Design**
-  - Mobile-first styling
-  - Improved touch usability and spacing
 
 - ⚠️ **Basic Alerts**
   - Feedback shown via alert boxes on form events
-
----
-
 
 ---
 
