@@ -59,8 +59,6 @@ A simple, responsive front-end authentication interface built with HTML, CSS, an
 
 **Pratik Joshi**
 
----
-
 ## 📃 License
 
 This project is open for personal and educational use. No license applied.
