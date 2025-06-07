@@ -4,7 +4,7 @@ A simple, responsive front-end authentication interface built with HTML, CSS, an
 
 ## 🔗 Live Demo
 
-[👉 View Project](https://pratiks-desk.site/practice-hub/login.html)
+[👉 View Project](https://pratiks-desk.site/practice-hub/user-access-ui/login.html)
 
 ---
 
