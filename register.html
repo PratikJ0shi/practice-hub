@@ -23,9 +23,7 @@
       margin: 0;
       background: var(--bg);
       color: #333;
-    }body, html {
-  overflow-x: hidden;
-}
+    }
 
 
 
@@ -53,8 +51,6 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
       overflow: auto;
       max-height: 90vh;
-      width: 100%;
-      box-sizing: border-box;
     }
 
     h2, h3 {
@@ -142,10 +138,16 @@
         grid-template-columns: 1fr;
         max-height: auto;
       }
+      body, html {
+  overflow-x: hidden;
+}
+
       h1{font-size:20px;}
 
       .form-section,
       .qa-section {
+        width: 100%;
+        box-sizing: border-box;
         max-height: none;
         padding: 1.5rem;
       }
