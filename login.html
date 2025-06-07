@@ -27,9 +27,9 @@
 
     header {
       background: var(--primary);
-      width:100%;
       color: white;
       padding: 1rem 2rem;
+      max-width: 100%;
       text-align: center;
     }
 
@@ -37,9 +37,21 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
+      max-width: 100%;
       margin: 2rem auto;
       padding: 1rem;
     }
+/* Fix overflow in QA section on small screens */
+.qa-section {
+  overflow-x: auto;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.doc-section pre {
+  white-space: pre-wrap; /* Allow pre blocks to wrap */
+  word-break: break-word;
+}
 
     .login-section,
     .qa-section {
@@ -115,13 +127,13 @@
     }
 
     /* Responsive */
-    @media (max-width: 800px) {
+    @media (max-width: 768px) {
       .container {
-       width:100%
+        grid-template-columns: 1fr;
+        padding: 1rem;
       }
 
       header h1 {
-        width:100%;
         font-size: 1.3rem;
       }
 
@@ -137,7 +149,6 @@
       table, th, td {
         font-size: 0.85rem;
       }
-      .testcase{font-size:10px;}
 
       .doc-section table {
         display: block;
@@ -149,7 +160,7 @@
 <body>
 
 <header>
-  <h1>Login</h1>
+  <h1>Login QA Testing</h1>
 </header>
 
 <div class="container">
@@ -210,7 +221,7 @@ Test Data:
     </div>
 
     <!-- Test Cases -->
-    <div class="doc-section testcase">
+    <div class="doc-section">
       <h3>🔍 Test Cases</h3>
       <table>
         <thead>
