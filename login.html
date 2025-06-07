@@ -159,8 +159,8 @@
     /* Forgot Password Link Styling */
 .forgot-password {
   display: block;
-  margin-top: 0px;
-  margin-right:2px;
+  margin-top: 8px;
+  margin-right:1px;
   text-align: right;
   font-size: 0.9rem;
   color: #007bff;
@@ -180,7 +180,7 @@ button:hover {
 }
 
 /* Responsive adjustments */
-@media (max-width: 800px) {
+@media (max-width: 480px) {
   form {
     width: 90%; /* Make form width smaller on mobile */
     padding: 15px;
@@ -214,8 +214,9 @@ button:hover {
       <label for="password">Password</label>
       <input type="password" id="password" name="password" required tabindex="2" />
 
-      <button type="submit" tabindex="3">Login</button>
       <a href="#" class="forgot-password">Forgot Password?</a>
+      <button type="submit" tabindex="3">Login</button>
+      
     </form>
   </div>
 
