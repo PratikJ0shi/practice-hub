@@ -1,57 +1,94 @@
-# UserAccess UI
+# 🔐 UserAccess UI
 
-A simple, responsive front-end authentication interface built with HTML, CSS, and JavaScript. Includes user login, registration, and password recovery pages. Designed as a personal project to understand user input flows and form handling.
+A responsive front-end authentication interface built with HTML, CSS, and JavaScript. Includes login, registration, and password recovery pages. Designed as a self-practice project to understand user input flows, form validation, and basic UI automation.
 
-## 🔗 Live Demo
+---
 
-[👉 View Project](https://pratiks-desk.site/practice-hub/user-access-ui/login.html)
+🌐 **Live Demo**
+
+- [🔑 Login Page](https://pratiks-desk.site/practice-hub/user-access-ui/login.html)  
+- [📝 Register Page](https://pratiks-desk.site/practice-hub/user-access-ui/register.html)  
+- [🔁 Forgot Password Page](https://pratiks-desk.site/practice-hub/user-access-ui/forgot-password.html)
 
 ---
 
 ## 📌 Features
 
 - 🔐 **Login Form**
-  - Email and password fields with basic validation
-  - User-friendly layout with hover effects
+  - Email/password fields with validation
+  - Clean layout with hover effects
 
 - 📝 **Registration Form**
-  - Fields: name, email, password, confirm password
-  - Form-level validation using HTML5
+  - Name, email, password, confirm password
+  - HTML5 + JavaScript validation
 
-- ❓ **Forgot Password Page**
-  - Email input for password recovery
+- ❓ **Forgot Password**
+  - Enter email to receive reset link (mock)
 
-- ⚠️ **Basic Alerts**
-  - Feedback shown via alert boxes on form events
+- ⚠️ **Alert Feedback**
+  - Alerts shown for success, error, and validation
 
 ---
 
-## 📋 Test Cases (Examples)
+## 🧪 QA Artifacts (Embedded)
 
-| TC ID  | Feature                 | Test Step                                  | Expected Result                         |
-|--------|-------------------------|--------------------------------------------|------------------------------------------|
-| TC006  | Form Alerts             | Submit form with various data              | Relevant alert is shown                  |
-| TC007  | Forgot Password Link    | Click on 'Forgot Password?' link           | Redirect to password recovery page       |
-| TC008  | Recovery Email Submit   | Submit empty, valid, invalid email inputs  | Correct alert shown for each case        |
+Each HTML page includes:
 
-> 👉 Full test cases available in `test-cases.html`
+- ✅ Test Plan  
+- 🧾 Test Scenarios  
+- 🔍 Test Cases Table
+
+### 📋 Sample Test Cases
+
+| TC ID   | Feature           | Step Description                     | Expected Result                     |
+|---------|-------------------|--------------------------------------|-------------------------------------|
+| TC006   | Form Alerts       | Submit forms with incomplete data    | Appropriate alert is shown          |
+| TC007   | Navigation        | Click "Forgot Password" on login     | Redirects to Forgot Password page   |
+| TC101   | Login             | Valid email & password               | Success alert shown                 |
+| TC103   | Login             | Empty email                          | Alert: Email is required            |
+| TC105   | Register          | Password mismatch                    | Alert: Passwords do not match       |
+| TC202   | Forgot Password   | Empty email                          | Alert: Email is required            |
+| TC203   | Forgot Password   | Invalid email format                 | Alert: Invalid email format         |
 
 ---
 
 ## 🛠️ Tech Stack
 
-- HTML5
-- CSS3 (Responsive design, hover states)
-- JavaScript (Basic alert handling, optional validation)
+- HTML5 + CSS3 (Responsive design)
+- Vanilla JavaScript (Client-side validation)
+- No backend — fully static
 
 ---
 
-## 🚀 Future Enhancements
+## 🤖 Selenium Automation (Java)
 
-- Backend integration for authentication
-- Input field animations and success messages
-- Password strength meter in registration form
-- Real email validation and recovery process
+To automate UI testing:
+
+- Page Classes:  
+  `LoginPage.java`, `RegisterPage.java`, `ForgotPasswordPage.java`
+
+- Test Classes:  
+  `LoginTest.java`, `RegisterTest.java`, `ForgotPasswordTest.java`
+
+- No frameworks required (TestNG/JUnit not used) — just basic Java + Selenium WebDriver.
+
+```java
+driver.get("https://pratiks-desk.site/practice-hub/user-access-ui/login.html");
+
+```
+## 🤝 Contributing
+
+This is a self-practice project to demonstrate front-end design and QA/automation skills.
+
+You're welcome to:
+- Suggest better HTML/CSS structure
+- Improve accessibility or UX
+- Refactor JavaScript validations
+- Submit issues or pull requests
+
+Just fork the repo, make changes, and create a Pull Request. I’ll review it and we can improve the project together!
+
+📢 All feedback and contributions are appreciated 🙏
 
 ---
 
@@ -62,5 +99,7 @@ A simple, responsive front-end authentication interface built with HTML, CSS, an
 ## 📃 License
 
 This project is open for personal and educational use. No license applied.
+
+---
 
 
